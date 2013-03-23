@@ -16,10 +16,7 @@
     }
 
     function _load(url) {
-        if(resourceCache[url]) {
-            return resourceCache[url];
-        }
-        else {
+        if( ! resourceCache[url]) {
             var img = new Image();
             img.onload = function() {
                 resourceCache[url] = img;
